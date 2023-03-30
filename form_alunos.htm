@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function testa_form() {
+                var n=document.forms["formalunos"]["nome_aluno"].value;
+                var m=document.forms["formalunos"]["matrícula"].value;
+
+                if (m==null || m=="") {
+                    alert("Número de matricula precisa ser informado");
+                    return false;
+                }
+                if (n==null || n=="") {
+                    alert("Nome de aluno precisa ser informado");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Sistema Acadêmico - Justificativa de Falta</h1>
+
+        <form name="formalunos" action="" onsubmit="return testa_form()" method="post">
+            Matrícula: <input type="text" name="matrícula"><br>
+            Nome: <input type="text" name="nome_aluno"><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
